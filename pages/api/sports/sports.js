@@ -16,7 +16,7 @@ Page({
           const secret = '*****'
           //发起网络请求
           wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=*****&secret=' + secret+'&js_code='+res.code+'&grant_type=authorization_code',
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=小程序ID&secret=' + secret+'&js_code='+res.code+'&grant_type=authorization_code',
             data: {
               code: res.code
             },
