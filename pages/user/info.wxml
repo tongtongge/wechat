@@ -1,0 +1,64 @@
+<!--info.wxml-->
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-nickname">{{userInfo.country}}-{{userInfo.province}}-{{userInfo.city}}</text>
+    <text class="userinfo-nickname"> {{gender}}</text>
+    <view class="userinfo-nickname" wx:if="{{userInfo.gender == '1' }}">男</view>
+     <view class="userinfo-nickname" wx:elif="{{userInfo.gender == '2' }}">女</view>
+      <view class="userinfo-nickname" wx:else="{{userInfo.gender == '0' }}">未知</view>
+  </view>
+    <text class="userinfo-url">{{userInfo.avatarUrl}}</text>
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>客服会话
+</contact-button>
+<button class="btn" bindtap="viewTap"> 事件绑定</button>
+
+  <view class=" usermotto">
+    <text class="user-motto" id="txtName">{{motto}}</text>
+  </view>
+  <view class="classname ">
+      <view class="classname">
+        模版template
+      </view>
+       <template name="staffName" >
+         <view>
+          FirstName:{{firstName}},LastName:{{lastName}}
+         </view>
+       </template>
+       
+       <template is="staffName" data="{{...staff[0]}}"></template>
+       <template is="staffName" data="{{...staff[1]}}"></template>
+       <template is="staffName" data="{{...staff[2]}}"></template>
+  </view>
+  <view class="classname">wxfor:</view>
+  <view wx:for="{{staff}}" wx:for-item="cur" wx:key="{{firstName}}"> {{index+1}}、FirstName:{{cur.firstName}},LastName:{{cur.lastName}}</view>
+
+</view>
+<scroll-view scroll-y style="height: 200px;" class="border" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i" wx:key="*this">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j" wx:key="*this">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
+</scroll-view> 
+
+<block wx:for="{{[1, 2, 3]}}" wx:key="*this">
+  <view> {{index}}: {{item}} </view>
+</block>
+
+<switch wx:for="{{objectArray}}" wx:key="id" style="display: block;"> {{item.unique}} </switch>
+
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+
+<input bindlongtap="longtap" type="text"  placeholder="长安效果" class="text" />

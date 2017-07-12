@@ -1,0 +1,5 @@
+/* input.wxss */
+
+.section{
+  margin-top: 6rpx;
+}

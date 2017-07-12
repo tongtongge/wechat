@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="navView" bindtap="tigger" data-num="1">视图容器</view>
+<view class="classname" hidden="{{view1}}">
+ <button bindtap="opentype" data-type="view">view</button>
+ <button bindtap="opentype" data-type="movable">movable</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="2">基础内容</view>
+<view class="classname" hidden="{{view2}}">
+<button bindtap="opentype" data-type="icon">icon</button>
+<button bindtap="opentype" data-type="text">text</button>
+<button bindtap="opentype" data-type="progress">progress</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="3">表单组件</view>
+<view class="classname" hidden="{{view3}}">
+<button bindtap="opentype" data-type="button">button</button>
+<button bindtap="opentype" data-type="checkbox">checkbox</button>
+<button bindtap="opentype" data-type="form">form</button>
+<button bindtap="opentype" data-type="input">input</button>
+<button bindtap="opentype" data-type="label">label</button>
+<button bindtap="opentype" data-type="picker">picker</button>
+<button bindtap="opentype" data-type="textarea">textarea</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="4">导航</view>
+<view class="classname" hidden="{{view4}}">
+<button bindtap="opentype" data-type="navigator">navigator</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="5">媒体组件</view>
+<view class="classname" hidden="{{view5}}">
+<button bindtap="opentype" data-type="audio">audio</button>
+<button bindtap="opentype" data-type="image">image</button>
+<button bindtap="opentype" data-type="video">video</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="6">地图</view>
+<view class="classname" hidden="{{view6}}">
+<button bindtap="opentype" data-type="map">map</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="7">画布</view>
+<view class="classname" hidden="{{view7}}">
+<button bindtap="opentype" data-type="canvas">canvas</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="8">客服会话</view>
+<view class="classname" hidden="{{view8}}">
+<button bindtap="opentype" data-type="contact">contact-button</button>
+</view>
+
+

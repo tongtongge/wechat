@@ -1,0 +1,118 @@
+// sports.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+  
+  },
+
+  login:function(){
+    wx.login({
+      success: function(res){
+        console.info("登录成功信息："+res.code+","+res.errMsg)
+        if (res.code) {
+          const secret = '*****'
+          //发起网络请求
+          wx.request({
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=*****&secret=' + secret+'&js_code='+res.code+'&grant_type=authorization_code',
+            data: {
+              code: res.code
+            },
+            success:function(res){
+              console.log(res.data.openid)
+              wx.showModal({
+                title: 'session_key',
+                content: 'openid:' + res.data.openid + ',key:' + res.data.session_key,
+              })
+            },
+            fail:function(){
+              wx.showModal({
+                title: '提示',
+                content: '换取code 换取 session_key失败',
+                showCancel: false,
+                confirmText: '确定'
+              })
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+      },
+      fail:function(res){
+        console.error(res)
+         wx.showModal({
+           title: '提示',
+           content: '登录失败',
+           showCancel: false,
+           confirmText: '确定'
+         })
+      }
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.showNavigationBarLoading()
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    wx.setNavigationBarTitle({
+      title: '微信运动数据'
+    })
+    wx.hideNavigationBarLoading()
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    wx.getWeRunData({
+      success(res) {
+        const encryptedData = res.encryptedData
+        console.info(encryptedData)
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

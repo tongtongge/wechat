@@ -1,0 +1,17 @@
+/* picker.wxss */
+
+.section{
+  background-color: #CCCCFF;
+  opacity: 0.8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section__title{
+  background-color: #fff;
+}
+
+.picker{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

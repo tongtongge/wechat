@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/user/info",
+    "pages/wxml/index",
+    "pages/wxml/icon/icon",
+    "pages/wxml/movable/movable",
+    "pages/wxml/view/view",
+    "pages/wxml/text/text",
+    "pages/wxml/progress/progress",
+    "pages/wxml/button/button",
+    "pages/wxml/checkbox/checkbox",
+    "pages/wxml/form/form",
+    "pages/wxml/input/input",
+    "pages/wxml/label/label",
+    "pages/wxml/picker/picker",
+    "pages/wxml/textarea/textarea",
+    "pages/wxml/navigator/navigator",
+    "pages/wxml/navigator/sample",
+    "pages/wxml/audio/audio",
+    "pages/wxml/image/image",
+    "pages/wxml/video/video",
+    "pages/wxml/map/map",
+    "pages/wxml/canvas/canvas",
+    "pages/wxml/contact/contact",
+    "pages/api/network/request/request",
+    "pages/api/index/index",
+    "pages/api/meiti/imgage/image",
+    "pages/api/sports/sports"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#CC99CC",
+    "navigationBarTitleText": "app.json设置显示的TitleText",
+    "navigationBarTextStyle": "whit",
+    "backgroundColor": "#99CC33"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#99CC33",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/user/info",
+        "text": "用户"
+      },
+      {
+        "pagePath": "pages/wxml/index",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/api/index/index",
+        "text": "API"
+      }
+    ]
+  }
+}

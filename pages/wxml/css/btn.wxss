@@ -1,0 +1,27 @@
+/* 按钮的公用样式 */
+
+button {
+  border: 1px solid #6c6;
+  background-color: #CCFF99;
+}
+
+.default{
+  background: #ffffff;
+  border:  1px solid #000000;
+}
+
+.middle {
+  width: 168px;
+}
+
+.mini {
+  width: 98px;
+}
+
+.btnHover{
+  background: #CCFFFF;
+}
+
+.submit{
+  background: #6c6;
+}

@@ -1,0 +1,8 @@
+/* index.wxss */
+.navView{
+  background-color: #FFCCCC;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height:36px;
+  margin-top: 2px;
+}

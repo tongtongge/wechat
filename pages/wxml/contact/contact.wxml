@@ -1,0 +1,12 @@
+<!--contact.wxml-->
+
+
+<view class="classname">contact-button打开</view>
+<contact-button 
+  type="default-light" 
+  size="27"
+  session-from="weapp"
+>
+</contact-button>
+
+<button open-type="contact">button打开</button>

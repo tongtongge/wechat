@@ -1,0 +1,13 @@
+/* navigator.wxss */
+.btn-area{
+  margin: 30px;
+}
+.nvitem{
+  margin: 20px;
+}
+.navigator-hover{
+  background-color: #CC99CC;
+}
+.other-navigator-hover{
+  color: #FF99CC;
+}

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="navView" bindtap="tigger" data-num="0">网络</view>
+<view class="classname" hidden="{{showArr[0]}}">
+ <button bindtap="opentype" data-url="network/request/request">request</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="1">上传、下载</view>
+<view class="classname" hidden="{{showArr[1]}}">
+ <button bindtap="opentype" data-url="uploadFile">uploadFile</button>
+ <button bindtap="opentype" data-url="downloadFile">downloadFile</button>
+</view>
+
+
+<view class="navView" bindtap="tigger" data-num="2">WebSocket</view>
+<view class="classname" hidden="{{showArr[2]}}">
+ <button bindtap="opentype" data-url="connectSocket">connectSocket</button>
+ <button bindtap="opentype" data-url="downloadFile">OnSocketOpen</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="3">媒体</view>
+<view class="classname" hidden="{{showArr[3]}}">
+ <button bindtap="opentype" data-url="uploadFile">图片</button>
+ <button bindtap="opentype" data-url="downloadFile">录音</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="4">媒体</view>
+<view class="classname" hidden="{{showArr[4]}}">
+ <button bindtap="opentype" data-url="sports/sports">微信运动</button>
+</view>
+

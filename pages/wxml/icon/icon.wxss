@@ -1,0 +1,4 @@
+/* icon.wxss */
+.group{
+  margin-top: 12px;
+}

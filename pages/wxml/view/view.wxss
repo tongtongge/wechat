@@ -1,0 +1,7 @@
+/* view.wxss */
+
+.img{
+  width: 99%;
+  margin-left: 2px;
+  margin-right: 1px;
+}

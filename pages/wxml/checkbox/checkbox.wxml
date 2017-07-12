@@ -1,0 +1,10 @@
+<!--checkbox.wxml-->
+
+
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}" wx:key="*this">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" color="#CCFF66"/>{{item.value}}
+  </label>
+</checkbox-group>
+
+
