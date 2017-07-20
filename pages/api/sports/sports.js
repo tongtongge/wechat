@@ -5,29 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
-  login:function(){
+  login: function () {
     wx.login({
-      success: function(res){
-        console.info("登录成功信息："+res.code+","+res.errMsg)
+      success: function (res) {
+        console.info("登录成功信息：" + res.code + "," + res.errMsg)
         if (res.code) {
           const secret = '*****'
           //发起网络请求
           wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=小程序ID&secret=' + secret+'&js_code='+res.code+'&grant_type=authorization_code',
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=小程序ID&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
             data: {
               code: res.code
             },
-            success:function(res){
+            success: function (res) {
               console.log(res.data.openid)
               wx.showModal({
                 title: 'session_key',
                 content: 'openid:' + res.data.openid + ',key:' + res.data.session_key,
               })
             },
-            fail:function(){
+            fail: function () {
               wx.showModal({
                 title: '提示',
                 content: '换取code 换取 session_key失败',
@@ -40,14 +40,14 @@ Page({
           console.log('获取用户登录态失败！' + res.errMsg)
         }
       },
-      fail:function(res){
+      fail: function (res) {
         console.error(res)
-         wx.showModal({
-           title: '提示',
-           content: '登录失败',
-           showCancel: false,
-           confirmText: '确定'
-         })
+        wx.showModal({
+          title: '提示',
+          content: '登录失败',
+          showCancel: false,
+          confirmText: '确定'
+        })
       }
     })
   },
@@ -56,7 +56,7 @@ Page({
    */
   onLoad: function (options) {
     wx.showNavigationBarLoading()
-  
+
   },
 
   /**
@@ -85,34 +85,34 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

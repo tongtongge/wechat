@@ -28,3 +28,18 @@
  <button bindtap="opentype" data-url="sports/sports">微信运动</button>
 </view>
 
+<view class="navView" bindtap="tigger" data-num="5">媒体</view>
+<view class="classname" hidden="{{showArr[5]}}">
+ <button bindtap="opentype" data-url="captureScreen/captureScreen">截屏</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="6">设备</view>
+<view class="classname" hidden="{{showArr[6]}}">
+ <button bindtap="opentype" data-url="systeminfo/systeminfo">系统信息</button>
+</view>
+
+<view class="navView" bindtap="tigger" data-num="7">数据缓存</view>
+<view class="classname" hidden="{{showArr[7]}}">
+ <button bindtap="opentype" data-url="localStorage/localStorage">数据缓存</button>
+</view>
+

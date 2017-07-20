@@ -1,3 +1,10 @@
 <!--request.wxml-->
-<view class="classname">wx.request</view>
+<view class="classname">网络</view>
+<view class="classname">
+  当前网络：{{networkType == "none" ? "无网络" : networkType}}
+</view>
 
+<view class="classname">
+  当前网络状态更改：{{networkStatus.isConnected == true ? "已连接" : "未连接"}}
+  ，类型:{{networkStatus.networkType}}
+</view>

@@ -28,7 +28,10 @@
     "pages/api/network/request/request",
     "pages/api/index/index",
     "pages/api/meiti/imgage/image",
-    "pages/api/sports/sports"
+    "pages/api/sports/sports",
+    "pages/api/captureScreen/captureScreen",
+    "pages/api/systeminfo/systeminfo",
+    "pages/api/localStorage/localStorage"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -47,20 +50,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
-      },
-      {
-        "pagePath": "pages/user/info",
-        "text": "用户"
-      },
-      {
         "pagePath": "pages/wxml/index",
         "text": "组件"
       },
       {
         "pagePath": "pages/api/index/index",
         "text": "API"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
       }
     ]
   }

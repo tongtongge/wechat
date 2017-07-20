@@ -1,0 +1,5 @@
+/* localStorage.wxss */
+
+view {
+ font-size: 14px;
+}

@@ -1,0 +1,41 @@
+<!--systeminfo.wxml-->
+<text>设备信息</text>
+<view class="classname">
+  手机型号：{{sysinfo.model}}
+</view>
+<view class="classname">
+  设备像素比：{{sysinfo.pixelRatio}}
+</view>
+<view class="classname">
+  屏幕宽度：{{sysinfo.screenWidth}}
+</view>
+<view class="classname">
+  屏幕高度：{{sysinfo.screenHeight}}
+</view>
+
+<view class="classname">
+  可使用窗口宽度：{{sysinfo.windowWidth}}
+</view>
+
+<view class="classname">
+  可使用窗口高度：{{sysinfo.windowHeight}}
+</view>
+<view class="classname">
+  可使用窗口高度：{{sysinfo.windowHeight}}
+</view>
+
+<view class="classname">
+  微信版本号：{{sysinfo.version}}
+</view>
+
+<view class="classname">
+  操作系统版本：{{sysinfo.system}}
+</view>
+
+<view class="classname">
+  客户端平台：{{sysinfo.platform}}
+</view>
+
+<view class="classname">
+  客户端基础库版本：{{sysinfo.SDKVersion}}
+</view>

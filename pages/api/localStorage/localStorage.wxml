@@ -1,0 +1,41 @@
+<view class="classname">
+  数据缓存，localStorage以用户维度隔离，同一台设备上，A 用户无法读取到 B 用户的数据。
+</view>
+<form bindsubmit="submitSet">
+  <view class="classname">
+    <view class="classname">
+      key：<input type="text" name="setKey" placeholder="请输入key" />
+    </view>
+    <view class="classname">
+      data：<input type="text" name="setData" placeholder="请输入data" />
+    </view>
+    <view class="classname">
+      <button type="primary" formType="submit"  >setStorage</button>
+    </view>
+  </view>
+</form>
+
+<form bindsubmit="submitSet2">
+  <view class="classname">
+    <view class="classname">
+      key：<input type="text" name="getKey" placeholder="请输入key" />
+    </view>
+    <view class="classname">
+      data：<input type="text" name="getValue" value="{{localValue}}" placeholder="请输入data" />
+    </view>
+    <view class="classname">
+      <button type="primary" formType="submit"  >getStorage</button>
+    </view>
+  </view>
+</form>
+
+<form bindsubmit="submitSet3">
+  <view class="classname">
+    <view class="classname">
+      key：<input type="text" name="removeKey" placeholder="请输入key" />
+    </view>
+    <view class="classname">
+      <button type="primary" formType="submit"  >removeStorage</button>
+    </view>
+  </view>
+</form>

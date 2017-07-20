@@ -1,0 +1,11 @@
+<!--captureScreen.wxml-->
+
+<view class="classname">
+  <view class="classname"> 截屏</view>
+  <view class="classname">wx.captureScreen</view>
+  <button type="primary" bindtap="capture">截屏</button>
+</view>
+<view class="classname">
+  <view class="classname"> 用户截屏事件</view>
+  <view class="classname">wx.onUserCaptureScreen</view>
+</view>

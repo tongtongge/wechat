@@ -1,47 +1,42 @@
-// index.js
-
-var statusArrs = [true]
-
+// systeminfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showArr: statusArrs
-  },
-  opentype: function (e) {
-    var url = e.currentTarget.dataset.url
-    url = '../' + url
-    wx.navigateTo({
-      url: url
-    })
+    model: "",
+    sysinfo: {}
   },
 
-  //显示隐藏
-  tigger: function (e) {
-    var that = this;
-    var num = e.currentTarget.dataset.num
-    statusArrs[num] = !statusArrs[num]
-    that.setData({
-      showArr: statusArrs
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    statusArrs = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
-    this.setData({
-      showArr: statusArrs
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-      
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+
+        that.setData({
+          model: "",
+          sysinfo: res
+        })
+        console.log(res.model)
+        console.log(res.pixelRatio)
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        console.log(res.language)
+        console.log(res.version)
+        console.log(res.platform)
+      }
+    })
   },
 
   /**
